@@ -2,3 +2,4 @@ keys.js
 .DS_Store
 git-test.txt
 /node_modules
+.idea/*
