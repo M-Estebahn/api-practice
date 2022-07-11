@@ -1,16 +1,14 @@
 
 
 
-// fetch("https://pokeapi.co/api/v2/pokemon")
-//     .then(res => res.json())
-//     .then(data => {
-//         console.log(data);
-//         data.results.map(pokemonInfo => {
-//             console.log(pokemonInfo.url)
-//         })
-// })
-
-const { get } = require("http");
+fetch("https://pokeapi.co/api/v2/pokemon")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        data.results.map(pokemonInfo => {
+            console.log(pokemonInfo)
+        })
+})
 
 const pokemon_number = 150
 
