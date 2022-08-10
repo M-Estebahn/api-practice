@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    background-color: aquamarine;
+}
+.small-card{
+    text-align: center;
+    background-color: gray;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+}
+ol{
+    padding-left: 1em;
+
+}
+h3,h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
