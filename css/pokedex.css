@@ -1,7 +1,4 @@
-body{
-    display: flex;
-    background-color: aquamarine;
-}
+
 .small-card{
     text-align: center;
     background-color: gray;
@@ -9,6 +6,8 @@ body{
     display: flex;
     flex-direction: column;
     border-radius: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 ol{
     padding-left: 1em;
@@ -17,4 +16,7 @@ ol{
 h3,h4{
     margin-top: 0;
     margin-bottom: 0;
+}
+#main{
+    background-color: aquamarine;
 }
