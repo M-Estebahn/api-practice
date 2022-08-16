@@ -40,8 +40,16 @@ for(let i=1;i<151;i++){
     promises.push(fetch(url).then(res=>res.json()));
 }
 
-    Promise.all(promises).then(res=>
-    console.log(res))
+    Promise.all(promises).then(pokedata=>{
+        console.log(pokedata)
+        const pokemon=pokedata.map(poke=>({
+            name: poke.name,
+            id: poke.id,
+            image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+pokemon.id+".png",
 
+        }))
+
+
+})
 
 
