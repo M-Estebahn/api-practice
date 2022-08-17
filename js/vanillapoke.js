@@ -42,13 +42,20 @@ for(let i=1;i<151;i++){
 
     Promise.all(promises).then(pokedata=>{
         console.log(pokedata)
-        const pokemon=pokedata.map(poke=>({
-            name: poke.name,
-            id: poke.id,
-            image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+pokemon.id+".png",
+        pokedata.forEach(pokemon=>{
+            document.getElementById('card-table').innerHTML+=
+                '<div class="small-card col-sm-12 col-md-3 ">'+
+                '<div>'+'<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/'+pokemon.id+'.png"' +' alt='+pokemon.name+'>'+'</div>'+
+                '<h2>'+pokemon.name+'</h2>'+
+                '<h3>'+'ID: '+pokemon.id+'</h3>'+
+                '<hr>'+
+                '<h4>'+'Moves:'+'</h4>'+
+                '<h5>'+pokemon.moves[0].move.name+'</h5>'+
+                '<h5>'+pokemon.moves[1].move.name+'</h5>'+
+                '<h5>'+pokemon.moves[2].move.name+'</h5>'+
+            '</div>'
 
-        }))
-
+        })
 
 })
 
